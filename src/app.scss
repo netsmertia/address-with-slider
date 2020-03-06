@@ -1,2 +1,83 @@
 @import '~bootstrap/scss/bootstrap.scss';
 
+@import 'slick.css';
+// @import 'slick-theme.scss';
+
+
+.slide-arrow {
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    background: red;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    user-select: none;
+    color:#666;
+    background-color: #f2f2f2;
+    opacity: .6;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.slide-arrow.next {
+    left: 90%;
+}
+
+.slide-arrow.prev {
+    left: 3.5%;
+}
+
+ul.slick-dots {
+    display: flex;
+    justify-content: center;
+    padding: 15px;;
+    li {
+        width: 18px;
+        height: 8px;
+        border-radius: 50px;
+        background-color: #d2d2d2;
+        list-style: none;
+        margin: 3px 5px;
+        cursor: pointer;
+        &.slick-active {
+            background-color: #b2b2b2;
+        }
+        button {
+            display: none;
+        }
+    }
+}
+
+.store-title {
+    text-align: center;
+    padding: 30px;
+}
+.address-slider {
+    height: 464px;
+    width: 1200px;
+    background-color: #f3f3f3;
+}
+.address-section, .slider-section {
+    height: 464px;
+}
+.address-slider {
+    display: flex;;
+}
+
+.address-section {
+    display: flex;
+    align-items: center;
+    padding-left: 44px;
+    flex-grow: 1;
+}
+.right-section {
+    width: 700px;
+    position: relative;
+}
+.slider-section, .map-section {
+    display: none;
+    &.active {
+        display: block;
+    }
+}

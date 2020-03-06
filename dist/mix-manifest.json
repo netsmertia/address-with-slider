@@ -1,5 +1,7 @@
 {
     "/app.js": "/app.js",
     "/app.css": "/app.css",
-    "/index.html": "/index.html"
+    "/vendor.js": "/vendor.js",
+    "/index.html": "/index.html",
+    "/slick.min.js": "/slick.min.js"
 }

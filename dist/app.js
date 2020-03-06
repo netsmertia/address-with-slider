@@ -93,7 +93,11 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+$('.image-slider').slick({
+  dots: true,
+  prevArrow: '#prev',
+  nextArrow: '#next'
+});
 
 /***/ }),
 
@@ -115,8 +119,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/nets/SSD/Development/Web/fiverr/address-slider/src/app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! /Users/nets/SSD/Development/Web/fiverr/address-slider/src/app.scss */"./src/app.scss");
+__webpack_require__(/*! D:\Dev\fvr\address-with-slider\src\app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! D:\Dev\fvr\address-with-slider\src\app.scss */"./src/app.scss");
 
 
 /***/ })

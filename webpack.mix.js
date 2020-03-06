@@ -2,9 +2,10 @@
 const mix = require('laravel-mix');
 
 mix.js('src/app.js', 'dist')
-
+   .js('src/vendor.js', 'dist')
    .sass('src/app.scss', 'dist')
    .copy("src/*.html", 'dist/')
+   .copy("src/slick.min.js", 'dist/')
    .setPublicPath('dist')
    .browserSync({
       proxy: false,
