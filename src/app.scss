@@ -1,6 +1,7 @@
-@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap/scss/bootstrap-reboot.scss';
+@import '~bootstrap/scss/grid';
+@import '~bootstrap/scss/type';
 
-@import 'slick.css';
 // @import 'slick-theme.scss';
 
 ul.slick-dots {
@@ -8,15 +9,15 @@ ul.slick-dots {
     justify-content: center;
     padding: 15px;;
     li {
-        width: 18px;
-        height: 8px;
+        width: 16px;
+        height: 6px;
         border-radius: 50px;
         background-color: #d2d2d2;
         list-style: none;
         margin: 3px 5px;
         cursor: pointer;
         &.slick-active {
-            background-color: #b2b2b2;
+            background-color: #aaa;
         }
         button {
             display: none;
@@ -29,43 +30,56 @@ ul.slick-dots {
 
 
 .address-slider {
-
-    // height: 464px;
-    // width: 1100px;
     background-color: #f3f3f3;
     margin: auto;
-    // display: flex;
-    &__left {
+    @at-root .address-section{
         display: flex;
         align-items: center;
         padding-left: 44px;
-        // flex-grow: 1;
     }
 
-    &__right {
-        @at-root.slider-section, .map-section {
-            display: none;
-            height: 464px;
+    @at-root.slider-section, .map-section {
+        display: none;
+        height: 464px;
+    }
+    @at-root.slider-section {
+        &--active {
+            display: block;
         }
-        @at-root.slider-section {
-            &--active {
-                display: block;
-            }
-        }
+    }
 
-        @at-root.map-section {
-            &--active {
-                display: block;
-            }
+    @at-root.map-section {
+        &--active {
+            display: block;
         }
     }
 }
 .address {
     padding-left: 40px;
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+    &__line {
+        margin-bottom: .5rem;
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        .arrow-icon {
+            width: 12px;
+            height: 12px;
+            margin-left: 3px;
+        }
+
+    }
 }
 
 .image-slider {
     position: relative;
+    &__slides {
+        z-index: 10;
+    }
     &__arrow {
         width: 50px;
         height: 50px;
@@ -80,11 +94,12 @@ ul.slick-dots {
         opacity: .6;
         padding: 12px;
         border-radius: 4px;
+        z-index: 20;
         &--next {
-            left: 90%;
+            right: 16px;
         }
         &--prev {
-            left: 3.5%;
+            left: 16px;
         }
     }
 
@@ -99,30 +114,6 @@ ul.slick-dots {
 
 
 
-
-
-
-.Flexible-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px;
-    height: 0;
-    overflow: hidden;
-}
-
-.Flexible-container iframe,   
-.Flexible-container object,  
-.Flexible-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-
-
-
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
 }
@@ -133,19 +124,67 @@ ul.slick-dots {
         padding-left: 0;
         padding-right: 0;
     }
-}
-
-// Medium devices (tablets, less than 992px)
-@media (max-width: 991.98px) {
+    .map-section {
+        height: 220px !important;
+    }
+    .slider-section {
+        display: block !important;
+        height: 320px !important;
+    }
     .address-slider {
         &__left {
             justify-content: center;
             text-align: center;
         }
     }
+    .address-section {
+        padding-bottom: 0 !important;
+    }
+    .address {
+        padding-bottom: 0;
+        text-align: left !important;
+
+        &__title {
+            padding-left: 30px;
+        } 
+        &__line {
+            padding-left: 30px !important;
+        }
+        &__btn {
+            margin-top: 10px;
+            display: flex;
+            width: 100%;
+            padding: 16px 30px;
+            margin-top: 18px;
+            border-top: 1px solid #e2e2e2;
+            justify-content: space-between !important;
+            cursor: pointer;
+            &:hover {
+                text-decoration: none;
+            }
+            a {
+                color: #444;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .map-section, .slider-section {
+        height: 400px;
+    }
+    .address-section {
+        justify-content: center;
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
     .address {
         padding-left: 0;
-        padding-bottom: 28px;
+        width: 100%;
+        padding-bottom: 0;
+        text-align: center;
         &__title {
             margin-bottom: 1rem;
             font-size: 1.6em;
@@ -155,10 +194,13 @@ ul.slick-dots {
         }
         &__btn {
             margin-top: 10px;
-            display: block;
+            width: 100%;
+            justify-content: center;
         }
     }
 }
 
 // Large devices (desktops, less than 1200px)
-@media (max-width: 1199.98px) {}
+@media (max-width: 1199.98px) {
+
+}

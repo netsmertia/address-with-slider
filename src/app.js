@@ -14,8 +14,10 @@ $('#showMap').click(function(event) {
     if ($($sliderSection).hasClass('slider-section--active')) {
         $sliderSection.removeClass('slider-section--active');
         $mapSection.addClass('map-section--active');
+        $('#showMap a').text('Show Store')
     } else {
         $sliderSection.addClass('slider-section--active');
         $mapSection.removeClass('map-section--active');
+        $('#showMap a').text('View on Map')
     }
 });

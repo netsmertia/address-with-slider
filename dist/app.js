@@ -107,9 +107,11 @@ $('#showMap').click(function (event) {
   if ($($sliderSection).hasClass('slider-section--active')) {
     $sliderSection.removeClass('slider-section--active');
     $mapSection.addClass('map-section--active');
+    $('#showMap a').text('Show Store');
   } else {
     $sliderSection.addClass('slider-section--active');
     $mapSection.removeClass('map-section--active');
+    $('#showMap a').text('View on Map');
   }
 });
 
@@ -133,7 +135,7 @@ $('#showMap').click(function (event) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nError: ENOENT: no such file or directory, open '/Users/nets/SSD/Development/Web/fiverr/address-slider/src/vendor.scss'\n    at runLoaders (/Users/nets/SSD/Development/Web/fiverr/address-slider/node_modules/webpack/lib/NormalModule.js:316:20)\n    at /Users/nets/SSD/Development/Web/fiverr/address-slider/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/nets/SSD/Development/Web/fiverr/address-slider/node_modules/loader-runner/lib/LoaderRunner.js:203:19\n    at process.nextTick (/Users/nets/SSD/Development/Web/fiverr/address-slider/node_modules/webpack/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:85:15)\n    at process._tickCallback (internal/process/next_tick.js:61:11)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
