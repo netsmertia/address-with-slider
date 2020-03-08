@@ -126,15 +126,27 @@ $('#showMap').click(function (event) {
 
 /***/ }),
 
+/***/ "./src/vendor.scss":
+/*!*************************!*\
+  !*** ./src/vendor.scss ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nError: ENOENT: no such file or directory, open '/Users/nets/SSD/Development/Web/fiverr/address-slider/src/vendor.scss'\n    at runLoaders (/Users/nets/SSD/Development/Web/fiverr/address-slider/node_modules/webpack/lib/NormalModule.js:316:20)\n    at /Users/nets/SSD/Development/Web/fiverr/address-slider/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /Users/nets/SSD/Development/Web/fiverr/address-slider/node_modules/loader-runner/lib/LoaderRunner.js:203:19\n    at process.nextTick (/Users/nets/SSD/Development/Web/fiverr/address-slider/node_modules/webpack/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:85:15)\n    at process._tickCallback (internal/process/next_tick.js:61:11)");
+
+/***/ }),
+
 /***/ 0:
-/*!*****************************************!*\
-  !*** multi ./src/app.js ./src/app.scss ***!
-  \*****************************************/
+/*!***********************************************************!*\
+  !*** multi ./src/app.js ./src/app.scss ./src/vendor.scss ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/nets/SSD/Development/Web/fiverr/address-slider/src/app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! /Users/nets/SSD/Development/Web/fiverr/address-slider/src/app.scss */"./src/app.scss");
+__webpack_require__(/*! /Users/nets/SSD/Development/Web/fiverr/address-slider/src/app.scss */"./src/app.scss");
+module.exports = __webpack_require__(/*! /Users/nets/SSD/Development/Web/fiverr/address-slider/src/vendor.scss */"./src/vendor.scss");
 
 
 /***/ })
