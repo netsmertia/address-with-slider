@@ -1,7 +1,4 @@
 node_modules
-<<<<<<< HEAD
 dist/mix-manifest.json
-=======
->>>>>>> mobile-size
 .DS_Store
 *.zip
