@@ -2,3 +2,4 @@ node_modules
 dist/mix-manifest.json
 .DS_Store
 *.zip
+dist/
