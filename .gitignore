@@ -3,3 +3,6 @@ dist/mix-manifest.json
 .DS_Store
 *.zip
 dist/
+dist/vendor.css
+dist/app.css
+dist/app.js
