@@ -17906,7 +17906,7 @@ __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\Dev\fvr\address-with-slider\src\vendor.js */"./src/vendor.js");
+module.exports = __webpack_require__(/*! /Users/nets/SSD/Development/Web/fiverr/address-slider/src/vendor.js */"./src/vendor.js");
 
 
 /***/ })

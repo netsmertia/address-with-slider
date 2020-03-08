@@ -93,10 +93,24 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-$('.image-slider').slick({
+$('.image-slider__slides').slick({
   dots: true,
   prevArrow: '#prev',
   nextArrow: '#next'
+});
+$('#showMap').click(function (event) {
+  event.preventDefault();
+  $sliderSection = $('.slider-section');
+  $mapSection = $('.map-section');
+  console.log($sliderSection.hasClass('slider-section--active'));
+
+  if ($($sliderSection).hasClass('slider-section--active')) {
+    $sliderSection.removeClass('slider-section--active');
+    $mapSection.addClass('map-section--active');
+  } else {
+    $sliderSection.addClass('slider-section--active');
+    $mapSection.removeClass('map-section--active');
+  }
 });
 
 /***/ }),
@@ -119,8 +133,8 @@ $('.image-slider').slick({
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Dev\fvr\address-with-slider\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! D:\Dev\fvr\address-with-slider\src\app.scss */"./src/app.scss");
+__webpack_require__(/*! /Users/nets/SSD/Development/Web/fiverr/address-slider/src/app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! /Users/nets/SSD/Development/Web/fiverr/address-slider/src/app.scss */"./src/app.scss");
 
 
 /***/ })
