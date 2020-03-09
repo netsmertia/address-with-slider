@@ -1,9 +1,25 @@
 
 $('.image-slider__slides').slick({
     dots: true,
+    infinite: false,
     prevArrow: '#prev',
-    nextArrow: '#next'
+    nextArrow: '#next',
 });
+$('.image-slider__slides').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    
+    if (nextSlide == 1) {
+        $('.image-slider__arrow--prev').removeClass('image-slider__arrow--hidden');
+    }
+    if (nextSlide == 0) {
+        $('.image-slider__arrow--prev').addClass('image-slider__arrow--hidden');
+    }
+    if (nextSlide == (slick.slideCount - 1)) {
+        $('.image-slider__arrow--next').addClass('image-slider__arrow--hidden');
+    }
+    if (nextSlide == (slick.slideCount - 2)) {
+        $('.image-slider__arrow--next').removeClass('image-slider__arrow--hidden');
+    }
+}); 
 
 $('#showMap').click(function(event) {
     event.preventDefault();
