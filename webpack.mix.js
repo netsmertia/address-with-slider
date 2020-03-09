@@ -3,7 +3,6 @@ const mix = require('laravel-mix');
 require('laravel-mix-purgecss');
 
 mix.js('src/app.js', 'dist')
-   .js('src/vendor.js', 'dist')
    .sass('src/app.scss', 'dist')
    .sass('src/vendor.scss', 'dist')
    .copy("src/*.html", 'dist/')

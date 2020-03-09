@@ -9,15 +9,15 @@ ul.slick-dots {
     justify-content: center;
     padding: 15px;;
     li {
-        width: 16px;
-        height: 6px;
+        width: 8px;
+        height: 8px;
         border-radius: 50px;
-        background-color: #d2d2d2;
+        background-color: #999;
         list-style: none;
-        margin: 3px 5px;
+        margin: 3px 10px;
         cursor: pointer;
-        &.slick-active {
-            background-color: #aaa;
+        &.slick-active, &:hover {
+            background-color: #666;
         }
         button {
             display: none;
@@ -30,7 +30,7 @@ ul.slick-dots {
 
 
 .address-slider {
-    background-color: #f3f3f3;
+    background-color: #f4f4f4;
     margin: auto;
     @at-root .address-section{
         display: flex;
@@ -55,7 +55,7 @@ ul.slick-dots {
     }
 }
 .address {
-    padding-left: 40px;
+    padding: 20px 20px 20px 40px;
 
     &__title {
         margin-bottom: 1rem;
@@ -72,6 +72,15 @@ ul.slick-dots {
             margin-left: 3px;
         }
 
+    }
+    &__direction {
+        margin-top: 20px;
+        max-height: 300px;
+        overflow: scroll;
+        display: none;
+        &--active {
+            display: block;
+        }
     }
 }
 
@@ -116,6 +125,9 @@ ul.slick-dots {
 
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) {
+    .slider-section {
+        height: 320px !important;
+    }
 }
 
 // Small devices (landscape phones, less than 768px)
@@ -129,7 +141,7 @@ ul.slick-dots {
     }
     .slider-section {
         display: block !important;
-        height: 320px !important;
+        // height: 320px !important;
     }
     .address-slider {
         &__left {
@@ -165,7 +177,17 @@ ul.slick-dots {
             a {
                 color: #444;
             }
+            .arrow-icon {
+                transform: rotate(0deg);
+                transition: all .3s;
+            }
         }
+        &__direction--active {
+            padding: 30px;
+        }
+    }
+    .rotate90deg {
+        transform: rotate(90deg) !important;
     }
 }
 
@@ -203,4 +225,27 @@ ul.slick-dots {
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
 
+}
+
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    .address--map-active {
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        .address {
+
+            &__content {
+                text-align: left !important;
+            }
+            &__direction {
+                width: 50%;
+                margin-top: 0px;
+                text-align: left;
+            }
+            &__btn {
+                justify-content: start;
+            }
+        }
+    }
 }
